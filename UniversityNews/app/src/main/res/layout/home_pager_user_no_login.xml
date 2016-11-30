@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:layout_height="140dp">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/login"/>
+       <Button
+           android:id="@+id/btn_login"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="点击登录"
+           android:textColor="@drawable/selector_textcolor_check_version"
+           android:background="@drawable/select_text_check_version"
+           />
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/zhuche"/>
+
+        <Button
+            android:id="@+id/btn_zheche"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="点击注册"
+            android:textColor="@drawable/selector_textcolor_check_version"
+            android:background="@drawable/select_text_check_version"
+            />
+    </LinearLayout>
+
+</LinearLayout>
+</LinearLayout>

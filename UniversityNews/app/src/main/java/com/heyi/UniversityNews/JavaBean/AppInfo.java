@@ -12,6 +12,15 @@ public class AppInfo implements Serializable {
     private String AppDes;
     private String AppUpInfo;
     private String AppDownlodUrl;
+    private String AppSplashUrl;
+
+    public String getAppSplashUrl() {
+        return AppSplashUrl;
+    }
+
+    public void setAppSplashUrl(String appSplashUrl) {
+        AppSplashUrl = appSplashUrl;
+    }
 
     public String getAppName() {
         return AppName;
@@ -61,6 +70,7 @@ public class AppInfo implements Serializable {
                 ", AppDes='" + AppDes + '\'' +
                 ", AppUpInfo='" + AppUpInfo + '\'' +
                 ", AppDownlodUrl='" + AppDownlodUrl + '\'' +
+                ", AppSplashUrl='" + AppSplashUrl + '\'' +
                 '}';
     }
 }

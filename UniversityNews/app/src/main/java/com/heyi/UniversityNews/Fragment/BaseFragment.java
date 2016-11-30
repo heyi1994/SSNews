@@ -15,7 +15,8 @@ import static android.icu.lang.UCharacter.GraphemeClusterBreak.V;
  */
 
 public abstract class BaseFragment extends Fragment {
-    private Activity mActivity;
+    protected Activity mActivity;
+    public BaseFragment(){}
     public BaseFragment(Activity activity){
         mActivity=activity;
     }

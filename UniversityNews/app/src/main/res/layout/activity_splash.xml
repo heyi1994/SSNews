@@ -6,6 +6,7 @@
     >
 <TextView
     android:id="@+id/tv_timer"
+    android:alpha="0.5"
     android:layout_width="40dp"
     android:layout_height="30dp"
     android:textSize="20sp"
@@ -15,13 +16,5 @@
     android:background="#daCFCFCF"
 
     />
-    <TextView
-        android:id="@+id/tv_version"
-        android:layout_width="60dp"
-        android:layout_height="30dp"
-        android:textSize="20sp"
-        android:textColor="@android:color/white"
-        android:layout_alignParentBottom="true"
-        android:gravity="center"
-        />
+
 </RelativeLayout>

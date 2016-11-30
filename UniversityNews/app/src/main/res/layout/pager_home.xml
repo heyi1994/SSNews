@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:background="@android:color/holo_blue_dark"
+        >
+<ImageView
+    android:id="@+id/toggle_silding_menu"
+    android:layout_width="25dp"
+    android:src="@mipmap/open_silding_menu"
+    android:layout_marginLeft="5dp"
+    android:layout_marginTop="10dp"
+    android:layout_height="25dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:text="首页"
+            android:textSize="25sp"
+            android:paddingBottom="5dp"
+            android:layout_centerInParent="true"
+            />
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+        <com.heyi.UniversityNews.View.HorViewPager
+            android:id="@+id/view_pager_weather"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </com.heyi.UniversityNews.View.HorViewPager>
+        <RelativeLayout
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_history"
+                android:padding="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="0.6"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:clickable="true"
+                android:textSize="15sp"
+                android:focusableInTouchMode="true"
+                android:focusable="true"
+                android:background="@android:color/holo_blue_dark"
+                android:textColor="@android:color/white"
+                />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+   <FrameLayout
+       android:layout_marginTop="10dp"
+       android:id="@+id/user_info"
+       android:layout_width="match_parent"
+       android:layout_height="140dp"></FrameLayout>
+
+    </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
