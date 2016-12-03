@@ -16,6 +16,7 @@
             />
     </LinearLayout>
 <EditText
+    android:id="@+id/et_login_phone"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginTop="10dp"
@@ -27,6 +28,7 @@
     android:layout_marginRight="30dp"
     />
     <EditText
+        android:id="@+id/et_login_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"

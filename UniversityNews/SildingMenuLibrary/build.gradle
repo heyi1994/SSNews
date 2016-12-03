@@ -9,7 +9,7 @@ buildscript {
 apply plugin: 'android-library'
 
 dependencies {
-    compile 'com.android.support:support-v4:13.0.0'
+    compile 'com.android.support:support-v4:24.2.1'
 }
 
 android {
@@ -17,7 +17,7 @@ android {
     buildToolsVersion "19.1.0"
 
     defaultConfig {
-        minSdkVersion 7
+        minSdkVersion 10
         targetSdkVersion 16
     }
 

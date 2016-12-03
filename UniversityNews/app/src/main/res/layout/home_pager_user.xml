@@ -36,7 +36,7 @@
             android:layout_marginRight="20dp"
             android:text="吾日三省吾身，为人蒙而不忠乎"
             android:textColor="#a000"
-            android:id="@+id/textView"
+            android:id="@+id/user_signature"
             android:layout_alignBottom="@+id/user_icon"
             android:singleLine="true"
             android:ellipsize="end"
@@ -60,6 +60,7 @@
                     android:layout_height="30dp"
                     android:background="@drawable/selector_good"/>
                 <TextView
+                    android:id="@+id/user_like_num"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@drawable/selector_text_black_bule"
@@ -78,6 +79,7 @@
                     android:layout_height="30dp"
                     android:background="@drawable/selector_bad"/>
                 <TextView
+                    android:id="@+id/user_dislike"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@drawable/selector_text_black_bule"
@@ -95,6 +97,7 @@
                     android:layout_height="30dp"
                     android:background="@drawable/selector_edit"/>
                 <TextView
+                    android:id="@+id/user_comment"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@drawable/selector_text_black_bule"
@@ -112,6 +115,7 @@
                     android:layout_height="30dp"
                     android:background="@drawable/selector_fa"/>
                 <TextView
+                    android:id="@+id/user_collect"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@drawable/selector_text_black_bule"

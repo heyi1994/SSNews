@@ -10,4 +10,6 @@ public class ServerURL {
     public static final String GET_IP_URL="/UniversityNewsServer/servlet/GetIpServlet";
     public static final String API_WEATHRE_URL="http://apicloud.mob.com/v1/weather/ip";
     public static final String API_HISTORY_URL="http://apicloud.mob.com/appstore/history/query";
+    public static final String USER_REGISTER_URL="/UniversityNewsServer/servlet/UserRegisterServlet";
+    public static final String USER_Login_URL="/UniversityNewsServer/servlet/LoginServlet";
 }

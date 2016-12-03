@@ -14,13 +14,27 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
+import com.heyi.UniversityNews.JavaBean.RegisterResult;
 import com.heyi.UniversityNews.JavaBean.SmsResponse;
 import com.heyi.UniversityNews.R;
+import com.heyi.UniversityNews.ServerURL.ServerURL;
 import com.heyi.UniversityNews.Utils.GetSixRandomNumber;
 import com.heyi.UniversityNews.Utils.JsonUtils;
 import com.heyi.UniversityNews.Utils.SendMessageExtend;
+import com.lidroid.xutils.HttpUtils;
+import com.lidroid.xutils.exception.HttpException;
+import com.lidroid.xutils.http.RequestParams;
+import com.lidroid.xutils.http.ResponseInfo;
+import com.lidroid.xutils.http.callback.RequestCallBack;
+import com.lidroid.xutils.http.client.HttpRequest;
+import com.lidroid.xutils.http.client.entity.BodyParamsEntity;
+
+import org.apache.http.Header;
+import org.apache.http.HttpEntity;
 
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -249,13 +263,58 @@ public class RegisterActivity extends Activity {
           @Override
           public void onClick(View v) {
               if(pwd&&re_pwd&&yzm){
+                  btn_register.setBackgroundColor(Color.GRAY);
+                  btn_register.setClickable(false);
                   JsonUtils json=new JsonUtils();
                   json.startFirstChild("API_ID","2008Heyi");
                   json.startOtherChild("nickName",et_nick_name.getText().toString().trim());
                   json.startOtherChild("password",et_pwd.getText().toString().trim());
                   json.startOtherChild("phoneNumber",et_phone.getText().toString().trim());
                   String info = json.endJson();
-                  System.out.println(info);
+                  HttpUtils utils=new HttpUtils();
+                  RequestParams rp=new RequestParams();
+                  rp.addBodyParameter("json",info);
+                  utils.send(HttpRequest.HttpMethod.POST,
+                          ServerURL.SERVER_IP + ServerURL.USER_REGISTER_URL,
+                          rp, new RequestCallBack<String>() {
+
+                              @Override
+                              public void onSuccess(ResponseInfo<String> responseInfo) {
+                                  String result = responseInfo.result;
+                                  if(result!=null){
+                                     Gson son=new Gson();
+                                      RegisterResult registerResult = son.fromJson(result,
+                                              RegisterResult.class);
+                                      if(registerResult.getRetCode().equals("200")){
+                                          Toast.makeText(RegisterActivity.this,
+                                                  "注册成功!",Toast.LENGTH_LONG)
+                                                  .show();
+                                          btn_register.setBackgroundResource(R.drawable.buttom_type1);
+                                          btn_register.setClickable(true);
+                                          finish();
+                                      }else if(registerResult.getRetCode().equals("500")){
+                                          Toast.makeText(RegisterActivity.this,
+                                                  "该手机号已注册",Toast.LENGTH_LONG).show();
+                                          btn_register.setBackgroundResource(R.drawable.buttom_type1);
+                                          btn_register.setClickable(true);
+                                      }else{
+                                          Toast.makeText(RegisterActivity.this,
+                                                  "服务器维护中！",Toast.LENGTH_LONG).show();
+                                      }
+                                  }else{
+                                      Toast.makeText(RegisterActivity.this,
+                                              "服务器维护中!",Toast.LENGTH_LONG).show();
+                                  }
+
+                              }
+
+                              @Override
+                              public void onFailure(HttpException e, String s) {
+                               Toast.makeText(RegisterActivity.this,
+                                       "网络错误！",Toast.LENGTH_LONG).show();
+                              }
+                          });
+
               }else{
                   Toast.makeText(RegisterActivity.this,"请按要求填写!"
                           ,Toast.LENGTH_LONG).show();
