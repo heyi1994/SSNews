@@ -1,9 +1,11 @@
 package com.heyi.UniversityNews.Activity;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
@@ -24,7 +26,10 @@ import com.jeremyfeinstein.slidingmenu.lib.app.SlidingFragmentActivity;
 
 import java.util.ArrayList;
 
+import static android.R.attr.data;
+import static android.R.attr.y;
 import static android.icu.lang.UCharacter.GraphemeClusterBreak.V;
+import static android.os.Build.VERSION_CODES.M;
 
 
 /**
@@ -36,6 +41,8 @@ public class MainActivity extends SlidingFragmentActivity{
     private ViewPager viewPager;
     private RadioGroup rg_bottom;
     private ArrayList<BasePager> arrayList=new ArrayList<BasePager>();
+    private int downY;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,7 +59,7 @@ public class MainActivity extends SlidingFragmentActivity{
     private void initData(){
         slidingMenu = getSlidingMenu();
         slidingMenu.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
-        slidingMenu.setBehindOffset(600);
+        slidingMenu.setBehindOffset(300);
         rg_bottom.check(R.id.rb_home);
         arrayList.add(new HomePager(MainActivity.this));
         arrayList.add(new NewsPager(MainActivity.this));
@@ -82,6 +89,21 @@ public class MainActivity extends SlidingFragmentActivity{
     public void toggle(){
         slidingMenu.toggle();
     }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if(requestCode==1&&resultCode==1){
+            String sign = data.getStringExtra("sign");
+            arrayList.get(3).backPress(sign,1);
+            HomePager homePager = (HomePager) arrayList.get(0);
+            homePager.changeNickOrSign(sign,1);
+        }else if(requestCode==2&&resultCode==2){
+            String nickName = data.getStringExtra("NickName");
+            arrayList.get(3).backPress(nickName,2);
+            HomePager homePager = (HomePager) arrayList.get(0);
+            homePager.changeNickOrSign(nickName,2);
+        }
+        super.onActivityResult(requestCode, resultCode, data);
+    }
 
   class MyAdapter extends PagerAdapter{
 
@@ -107,5 +129,6 @@ public class MainActivity extends SlidingFragmentActivity{
           return mView;
       }
   }
+
 
 }

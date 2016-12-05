@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:background="@android:color/holo_blue_dark"
+        >
+        <ImageView
+            android:id="@+id/iv_back_me"
+            android:layout_width="25dp"
+            android:src="@mipmap/back_2"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_height="25dp" />
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:text="修改签名"
+            android:textSize="20sp"
+            android:paddingBottom="5dp"
+            android:layout_centerInParent="true"
+            />
+        <TextView
+            android:id="@+id/change"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:text="修改"
+            android:clickable="true"
+            android:focusableInTouchMode="true"
+            android:focusable="true"
+            android:textSize="20sp"
+            android:layout_marginTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_alignParentRight="true"
+            />
+    </RelativeLayout>
+    <EditText
+        android:layout_margin="10dp"
+        android:id="@+id/change_signature"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        />
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#eee"
+        />
+</LinearLayout>

@@ -33,6 +33,7 @@ import com.lidroid.xutils.http.client.HttpRequest;
 
 import static android.icu.lang.UCharacter.GraphemeClusterBreak.V;
 import static android.view.View.inflate;
+import static com.heyi.UniversityNews.R.mipmap.nick_name;
 
 /**
  * Created by heyi on 2016/11/28.
@@ -239,5 +240,12 @@ public class UserModular extends BaseModular {
                 Context.MODE_PRIVATE).getInt("collect_num", 0);
         user_collect.setText(""+collect);
     }
-
+    public void changeNickOrSign(String result,int requestCode)
+    {
+        if(requestCode==2) {
+            user_name.setText(result);
+        }else if(requestCode==1){
+            user_sign.setText(result);
+        }
+    }
 }

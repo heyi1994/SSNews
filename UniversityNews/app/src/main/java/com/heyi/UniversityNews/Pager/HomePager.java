@@ -75,6 +75,7 @@ public class HomePager extends BasePager {
     private TextView day3_tem;
     private  TextView day3_wind;
     private View future;
+    private UserModular userModular;
 
     public HomePager(Activity activity) {
         super(activity);
@@ -319,6 +320,10 @@ public class HomePager extends BasePager {
     * 用户模块
     * */
     private void initUserInfo(){
-    user_info.addView(new UserModular(mActivity).mView);
+        userModular = new UserModular(mActivity);
+        user_info.addView(userModular.mView);
+    }
+    public void changeNickOrSign(String result,int requestCode){
+     userModular.changeNickOrSign(result,requestCode);
     }
 }

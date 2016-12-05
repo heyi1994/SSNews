@@ -12,4 +12,5 @@ public class ServerURL {
     public static final String API_HISTORY_URL="http://apicloud.mob.com/appstore/history/query";
     public static final String USER_REGISTER_URL="/UniversityNewsServer/servlet/UserRegisterServlet";
     public static final String USER_Login_URL="/UniversityNewsServer/servlet/LoginServlet";
+    public static final String UPDATE_USER_INFO_URL="/UniversityNewsServer/servlet/UpdateUserInfoServlet";
 }
