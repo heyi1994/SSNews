@@ -8,6 +8,7 @@
        android:id="@+id/view_pager_main"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
+       android:background="#fff"
        android:layout_weight="1"
        >
    </com.heyi.UniversityNews.View.NoScrollViewPager>

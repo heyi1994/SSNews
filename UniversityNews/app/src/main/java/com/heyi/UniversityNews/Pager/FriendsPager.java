@@ -1,22 +1,35 @@
 package com.heyi.UniversityNews.Pager;
 
 import android.app.Activity;
+import android.support.design.widget.AppBarLayout;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
+
+import com.heyi.UniversityNews.R;
 
 /**
  * Created by heyi on 2016/11/26.
  */
 
 public class FriendsPager extends BasePager {
+    private AppBarLayout app_bar;
+
     public FriendsPager(Activity activity) {
         super(activity);
     }
 
     @Override
     public View initView() {
-        TextView textView=new TextView(mActivity);
-        textView.setText("呵呵，我是盆友你信吗！");
-        return textView;
+        /*View view = View.inflate(mActivity, R.layout.pager_friends, null);
+        Toolbar toolbar= (Toolbar) view.findViewById(R.id.toolbar);
+        toolbar.setTitle("沈阳师范大学");*/
+        TextView tv=new TextView(mActivity);
+        tv.setText("朋友");
+        return tv;
+    }
+
+    @Override
+    public void initData() {
     }
 }

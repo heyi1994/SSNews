@@ -33,4 +33,6 @@ dependencies {
     compile files('libs/taobao-sdk-java-auto_1455552377940-20161128.jar')
     compile 'com.github.IntruderShanky:Frisson:2.0.0'
     compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile 'com.github.todou:appbarspring:1.0.3'
+    compile project(':ViewPagerIndicatorLibrary')
 }

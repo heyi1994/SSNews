@@ -11,5 +11,6 @@
         <item name="android:textSize">10sp</item>
         <item name="android:textColor">@drawable/select_text_main_bottom</item>
     </style>
-
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
 </resources>
