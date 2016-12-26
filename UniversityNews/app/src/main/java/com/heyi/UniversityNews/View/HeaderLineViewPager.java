@@ -30,9 +30,9 @@ public class HeaderLineViewPager extends ViewPager {
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
+        getParent().requestDisallowInterceptTouchEvent(true);//先让父控件不拦截
         switch (ev.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                getParent().requestDisallowInterceptTouchEvent(true);//先让父控件不拦截
                 startX = (int) ev.getRawX();
                 startY = (int) ev.getRawY();
                 break;

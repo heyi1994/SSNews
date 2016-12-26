@@ -28,6 +28,7 @@
         <activity android:name=".Activity.RegisterActivity"></activity>
         <activity android:name=".Activity.ChangeSignActivity"></activity>
         <activity android:name=".Activity.ChangeNickNameActivity"></activity>
+        <activity android:name=".Activity.HeaderLineVPNewsDetail"></activity>
     </application>
 
 </manifest>

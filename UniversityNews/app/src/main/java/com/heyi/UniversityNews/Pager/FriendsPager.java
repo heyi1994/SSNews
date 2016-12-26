@@ -2,7 +2,7 @@ package com.heyi.UniversityNews.Pager;
 
 import android.app.Activity;
 import android.support.design.widget.AppBarLayout;
-import android.support.v7.widget.Toolbar;
+
 import android.view.View;
 import android.widget.TextView;
 
@@ -21,7 +21,7 @@ public class FriendsPager extends BasePager {
 
     @Override
     public View initView() {
-        /*View view = View.inflate(mActivity, R.layout.pager_friends, null);
+        /*View view = View.inflate(mActivity, R.layout.header_line_vp_news_detail, null);
         Toolbar toolbar= (Toolbar) view.findViewById(R.id.toolbar);
         toolbar.setTitle("沈阳师范大学");*/
         TextView tv=new TextView(mActivity);
