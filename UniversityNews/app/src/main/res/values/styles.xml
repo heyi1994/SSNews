@@ -13,4 +13,9 @@
     </style>
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <style name="EditTextStyle">
+        <item name="android:textCursorDrawable">@drawable/edit_cursor</item>
+        <item name="android:background">@drawable/edit_bg</item>
+    </style>
 </resources>

@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.view.Window;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -44,6 +45,7 @@ public class ChangeNickNameActivity extends Activity {
     }
 
     private void initView() {
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_change_nick_name);
         iv_back= (ImageView) findViewById(R.id.iv_back_nn);
         tv_change= (TextView) findViewById(R.id.change_nick_name);

@@ -133,7 +133,8 @@ public class UserModular extends BaseModular {
                                                     LoginResult.class);
                                             if(loginResult.isSuccess()&&loginResult.getRetCode()==200){
                                                 UserInfo userInfo = loginResult.getResult();
-                                                SharedPreferences sp = mActivity.getSharedPreferences("userInfo",
+                                                SharedPreferences sp = mActivity.
+                                                        getSharedPreferences("userInfo",
                                                         Context.MODE_PRIVATE);
                                                 sp.edit().putBoolean("login",true).commit();
                                                 sp.edit().putString("nick_name",

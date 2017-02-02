@@ -54,8 +54,8 @@ public class CommentItemView {
         user_comment.setText(edit);
     }
 
-    public void setCommentDate(Date date){
-        comment_date.setText(new SimpleDateFormat("yyyy-MM-dd").format(date));
+    public void setCommentDate(String date){
+        comment_date.setText(date);
     }
 
     public void setCommentEditNum(int editNum){

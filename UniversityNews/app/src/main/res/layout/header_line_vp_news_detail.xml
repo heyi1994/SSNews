@@ -59,9 +59,9 @@
     </android.support.design.widget.AppBarLayout>
 
 <include layout="@layout/content_header_line_vp_news"></include>
-
 </android.support.design.widget.CoordinatorLayout>
     <LinearLayout
+        android:id="@+id/login_in_show_tool"
         android:layout_alignParentRight="true"
         android:layout_width="60dp"
         android:orientation="vertical"
@@ -132,9 +132,13 @@
             android:textColor="@android:color/black"
             />
         <ImageView
+            android:id="@+id/header_line_news_detail_add_comment"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:src="@drawable/edit"
+            android:focusableInTouchMode="true"
+            android:focusable="true"
+            android:clickable="false"
             android:layout_weight="1"
             />
         <TextView
@@ -146,4 +150,25 @@
             />
     </LinearLayout>
     </LinearLayout>
+
+    <LinearLayout
+        android:visibility="invisible"
+        android:background="#aeee"
+        android:id="@+id/news_comment_add_complete"
+        android:layout_width="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content">
+<ImageView
+    android:id="@+id/news_comment_add_complete_iv"
+    android:layout_width="45dp"
+    android:src="@drawable/edit"
+    android:layout_height="45dp" />
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textColor="@android:color/black"
+    android:text="+1"
+    />
+    </LinearLayout>
+
 </RelativeLayout>

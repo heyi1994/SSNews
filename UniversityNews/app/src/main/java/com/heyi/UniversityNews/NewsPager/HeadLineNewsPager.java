@@ -224,6 +224,7 @@ public class HeadLineNewsPager extends NewsPagerDetailBasePager {
                 @Override
                 public void onClick(View v) {
                     Intent intent=new Intent(mActivity,HeaderLineVPNewsDetail.class);
+                    intent.putExtra("news_id",vp_news.get(item).getVp_news_id());
                     intent.putExtra("title",vp_news.get(item).getVp_title());
                     intent.putExtra("type",vp_news.get(item).getVp_type());
                     intent.putExtra("image_url",ServerURL.SERVER_IP+

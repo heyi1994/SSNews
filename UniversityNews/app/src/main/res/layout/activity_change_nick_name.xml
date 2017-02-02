@@ -4,8 +4,7 @@
     android:layout_height="match_parent">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:gravity="center_vertical"
+        android:layout_height="60dp"
         android:background="@android:color/holo_blue_dark"
         >
         <ImageView
@@ -13,6 +12,7 @@
             android:layout_width="25dp"
             android:src="@mipmap/back_2"
             android:layout_marginLeft="5dp"
+            android:layout_centerVertical="true"
             android:layout_marginTop="5dp"
             android:layout_height="25dp" />
         <TextView
@@ -21,7 +21,7 @@
             android:layout_height="wrap_content"
             android:textColor="@android:color/white"
             android:text="修改昵称"
-            android:textSize="20sp"
+            android:textSize="25sp"
             android:paddingBottom="5dp"
             android:layout_centerInParent="true"
             />
@@ -36,22 +36,21 @@
             android:focusable="true"
             android:textSize="20sp"
             android:layout_marginTop="5dp"
-            android:paddingBottom="5dp"
             android:layout_marginRight="5dp"
+            android:layout_centerVertical="true"
             android:layout_alignParentRight="true"
             />
     </RelativeLayout>
     <EditText
+        android:gravity="top"
         android:layout_margin="10dp"
         android:id="@+id/et_change_nick_name"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="150dp"
+        android:padding="10dp"
+        android:textColor="@android:color/holo_blue_dark"
+        android:background="@drawable/change_bg"
+        android:textCursorDrawable="@drawable/edit_cursor"
         android:maxLines="1"
-        />
-    <TextView
-
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#eee"
         />
 </LinearLayout>

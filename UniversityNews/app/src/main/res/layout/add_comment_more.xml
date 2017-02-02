@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:clickable="true"
+    android:id="@+id/comment_more"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="@drawable/select_me_pager_bg"
+    android:layout_height="80dp">
+<TextView
+    android:padding="10dp"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:text="点击查看更多..."
+    android:textSize="20sp"
+    android:textColor="@android:color/holo_blue_dark"
+    />
+</LinearLayout>

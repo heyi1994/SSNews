@@ -43,6 +43,7 @@ public class ChangeSignActivity extends Activity {
     }
 
     private void initView() {
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_change_sign);
        tv_change= (TextView) findViewById(R.id.change);
         et_change= (EditText) findViewById(R.id.change_signature);
@@ -58,6 +59,7 @@ public class ChangeSignActivity extends Activity {
             @Override
             public void onClick(View v) {
                 si = et_change.getText().toString().toString();
+                System.out.println(si);
                 if(!TextUtils.isEmpty(si)){
                     HttpUtils http=new HttpUtils();
                     RequestParams rp=new RequestParams();

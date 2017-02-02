@@ -35,4 +35,5 @@ dependencies {
     compile 'de.hdodenhof:circleimageview:2.1.0'
     compile 'com.github.todou:appbarspring:1.0.3'
     compile project(':ViewPagerIndicatorLibrary')
+    compile 'com.android.support:gridlayout-v7:25.0.1'
 }
